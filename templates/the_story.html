@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Here is your story! {% endblock %}
+{% block content %}
+<p>
+{% for word in text %}
+{% if word in prompts.keys() %}
+{{ prompts[word] }}
+{% else %}
+{{word}}
+{% endif %}
+{% endfor %}
+{% endblock %}
+</p>

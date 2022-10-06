@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Make your story! {% endblock %}
+{% block content %}
+<h1>Mad Lib</h1>
+
+<form action="/fill-in-the-blanks" method="POST">
+    <label for="prompts">Comma separated list of parts of speech to generate a story</label>
+    <input name="prompts" type="text" />
+    <label for = "story-text">What is your story text? Use {} to indicate your parts of speech</label>
+    <textarea name="story-text" cols="33"></textarea>
+    <button>Generate for me!</button>
+</form>
+{% endblock %}

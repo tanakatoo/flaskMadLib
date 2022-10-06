@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Fill in the blanks! {% endblock %}
+{% block content %}
+<p>Fill this in!</p>
+<form action="/story" method="POST">
+    {% for p in prompts %}
+        <label for="speech">{{p}}</label>
+        <input name="{{p}}" type="text" />
+    {% endfor %}
+    <!-- <input name="story-text" type="text" value="{{text}}" style="display: none;"/> -->
+    <button>Make story</button>
+</form>
+{% endblock %}
